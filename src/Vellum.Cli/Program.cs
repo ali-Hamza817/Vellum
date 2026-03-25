@@ -60,9 +60,28 @@ class Program
             Console.WriteLine($"Extracted {graph.Nodes.Count} types and {graph.Edges.Count} dependencies.");
 
             Console.WriteLine($"Vellum: Ingesting design {designPath}...");
-            var parser = new PlantUmlParser();
-            var designContent = await File.ReadAllTextAsync(designPath);
-            var design = parser.Parse(designContent);
+            DesignModel design;
+            var extension = Path.GetExtension(designPath).ToLower();
+
+            if (extension == ".png" || extension == ".jpg" || extension == ".jpeg")
+            {
+                var apiKey = Environment.GetEnvironmentVariable("VELLUM_API_KEY");
+                if (string.IsNullOrEmpty(apiKey))
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Warning: VELLUM_API_KEY not found. Vision parsing might fail.");
+                    Console.ResetColor();
+                }
+                var visionParser = new VisionUmlParser(apiKey);
+                design = await visionParser.ParseImageAsync(designPath);
+            }
+            else
+            {
+                var parser = new PlantUmlParser();
+                var designContent = await File.ReadAllTextAsync(designPath);
+                design = parser.Parse(designContent);
+            }
+            
             Console.WriteLine($"Ingested {design.Classes.Count} defined classes and {design.Rules.Count} architectural rules.");
 
             Console.WriteLine("Vellum: Validating compliance...");
