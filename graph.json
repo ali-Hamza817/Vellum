@@ -1,0 +1,92 @@
+{
+  "Nodes": [
+    {
+      "Id": "SampleApp.UI.Class1",
+      "Name": "Class1",
+      "Type": "class",
+      "Namespace": "SampleApp.UI"
+    },
+    {
+      "Id": "SampleApp.UI.OrderController",
+      "Name": "OrderController",
+      "Type": "class",
+      "Namespace": "SampleApp.UI"
+    },
+    {
+      "Id": "SampleApp.Service.Class1",
+      "Name": "Class1",
+      "Type": "class",
+      "Namespace": "SampleApp.Service"
+    },
+    {
+      "Id": "SampleApp.Service.OrderService",
+      "Name": "OrderService",
+      "Type": "class",
+      "Namespace": "SampleApp.Service"
+    },
+    {
+      "Id": "SampleApp.Data.Class1",
+      "Name": "Class1",
+      "Type": "class",
+      "Namespace": "SampleApp.Data"
+    },
+    {
+      "Id": "SampleApp.Data.OrderRepository",
+      "Name": "OrderRepository",
+      "Type": "class",
+      "Namespace": "SampleApp.Data"
+    }
+  ],
+  "Edges": [
+    {
+      "SourceId": "SampleApp.UI.OrderController",
+      "TargetId": "SampleApp.Service.OrderService",
+      "RelationType": "Reference"
+    },
+    {
+      "SourceId": "SampleApp.UI.OrderController",
+      "TargetId": "SampleApp.Data.OrderRepository",
+      "RelationType": "Reference"
+    },
+    {
+      "SourceId": "SampleApp.UI.OrderController",
+      "TargetId": "void",
+      "RelationType": "Reference"
+    },
+    {
+      "SourceId": "SampleApp.UI.OrderController",
+      "TargetId": "object",
+      "RelationType": "Reference"
+    },
+    {
+      "SourceId": "SampleApp.Service.OrderService",
+      "TargetId": "SampleApp.Data.OrderRepository",
+      "RelationType": "Reference"
+    },
+    {
+      "SourceId": "SampleApp.Service.OrderService",
+      "TargetId": "void",
+      "RelationType": "Reference"
+    },
+    {
+      "SourceId": "SampleApp.Service.OrderService",
+      "TargetId": "object",
+      "RelationType": "Reference"
+    },
+    {
+      "SourceId": "SampleApp.Data.OrderRepository",
+      "TargetId": "void",
+      "RelationType": "Reference"
+    },
+    {
+      "SourceId": "SampleApp.Data.OrderRepository",
+      "TargetId": "object",
+      "RelationType": "Reference"
+    },
+    {
+      "SourceId": "SampleApp.Data.OrderRepository",
+      "TargetId": "System.Console",
+      "RelationType": "Reference"
+    }
+  ]
+}

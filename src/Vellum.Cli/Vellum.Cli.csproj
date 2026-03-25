@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vellum.Ingestor\Vellum.Ingestor.csproj" />
+    <ProjectReference Include="..\Vellum.Extractor\Vellum.Extractor.csproj" />
+    <ProjectReference Include="..\Vellum.Validator\Vellum.Validator.csproj" />
+    <ProjectReference Include="..\Vellum.Remediation\Vellum.Remediation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="17.11.48" ExcludeAssets="runtime" PrivateAssets="all" />
+    <PackageReference Include="NuGet.Frameworks" Version="6.5.0" ExcludeAssets="runtime" PrivateAssets="all" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

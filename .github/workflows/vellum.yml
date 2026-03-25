@@ -1,0 +1,54 @@
+name: Vellum Design Enforcement
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  vellum-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore Vellum.sln
+
+    - name: Build Vellum
+      run: dotnet build Vellum.sln --no-restore
+
+    - name: Run Vellum Design Check
+      id: vellum
+      run: |
+        start_time=$(date +%s)
+        dotnet run --project src/Vellum.Cli/Vellum.Cli.csproj -- \
+          check \
+          --solution samples/eShopDemo/SampleApp/SampleApp.sln \
+          --design samples/eShopDemo/design.puml \
+          --output vellum-report.json
+        end_time=$(date +%s)
+        latency=$((end_time - start_time))
+        echo "Vellum Latency: ${latency}s"
+        echo "latency=${latency}" >> $GITHUB_OUTPUT
+
+    - name: Upload Vellum Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: vellum-report
+        path: vellum-report.json
+
+    - name: Verify Latency SLA (< 15s)
+      run: |
+        if [ "${{ steps.vellum.outputs.latency }}" -gt 15 ]; then
+          echo "Vellum latency exceeds Q1 target of 15s!"
+          exit 1
+        fi

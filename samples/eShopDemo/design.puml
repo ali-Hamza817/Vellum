@@ -1,0 +1,5 @@
+@startuml
+[UI] -> [Service]
+[Service] -> [Data]
+[UI] -x-> [Data]
+@enduml

@@ -1,0 +1,129 @@
+{
+  "Graph": {
+    "Nodes": [
+      {
+        "Id": "SampleApp.UI.Class1",
+        "Name": "Class1",
+        "Type": "class",
+        "Namespace": "SampleApp.UI"
+      },
+      {
+        "Id": "SampleApp.UI.OrderController",
+        "Name": "OrderController",
+        "Type": "class",
+        "Namespace": "SampleApp.UI"
+      },
+      {
+        "Id": "SampleApp.Service.Class1",
+        "Name": "Class1",
+        "Type": "class",
+        "Namespace": "SampleApp.Service"
+      },
+      {
+        "Id": "SampleApp.Service.OrderService",
+        "Name": "OrderService",
+        "Type": "class",
+        "Namespace": "SampleApp.Service"
+      },
+      {
+        "Id": "SampleApp.Data.Class1",
+        "Name": "Class1",
+        "Type": "class",
+        "Namespace": "SampleApp.Data"
+      },
+      {
+        "Id": "SampleApp.Data.OrderRepository",
+        "Name": "OrderRepository",
+        "Type": "class",
+        "Namespace": "SampleApp.Data"
+      }
+    ],
+    "Edges": [
+      {
+        "SourceId": "SampleApp.UI.OrderController",
+        "TargetId": "SampleApp.Service.OrderService",
+        "RelationType": "Reference"
+      },
+      {
+        "SourceId": "SampleApp.UI.OrderController",
+        "TargetId": "SampleApp.Data.OrderRepository",
+        "RelationType": "Reference"
+      },
+      {
+        "SourceId": "SampleApp.UI.OrderController",
+        "TargetId": "void",
+        "RelationType": "Reference"
+      },
+      {
+        "SourceId": "SampleApp.UI.OrderController",
+        "TargetId": "object",
+        "RelationType": "Reference"
+      },
+      {
+        "SourceId": "SampleApp.Service.OrderService",
+        "TargetId": "SampleApp.Data.OrderRepository",
+        "RelationType": "Reference"
+      },
+      {
+        "SourceId": "SampleApp.Service.OrderService",
+        "TargetId": "void",
+        "RelationType": "Reference"
+      },
+      {
+        "SourceId": "SampleApp.Service.OrderService",
+        "TargetId": "object",
+        "RelationType": "Reference"
+      },
+      {
+        "SourceId": "SampleApp.Data.OrderRepository",
+        "TargetId": "void",
+        "RelationType": "Reference"
+      },
+      {
+        "SourceId": "SampleApp.Data.OrderRepository",
+        "TargetId": "object",
+        "RelationType": "Reference"
+      },
+      {
+        "SourceId": "SampleApp.Data.OrderRepository",
+        "TargetId": "System.Console",
+        "RelationType": "Reference"
+      }
+    ]
+  },
+  "Design": {
+    "Classes": [],
+    "Rules": [
+      {
+        "SourceLayer": "UI",
+        "TargetLayer": "Service",
+        "IsAllowed": true
+      },
+      {
+        "SourceLayer": "Service",
+        "TargetLayer": "Data",
+        "IsAllowed": true
+      },
+      {
+        "SourceLayer": "UI",
+        "TargetLayer": "Data",
+        "IsAllowed": false
+      }
+    ]
+  },
+  "Violations": [
+    {
+      "Source": "SampleApp.UI.OrderController",
+      "Target": "SampleApp.Data.OrderRepository",
+      "Rule": "UI -x-\u003E Data",
+      "Description": "Violation: OrderController in UI layer direct dependency on OrderRepository in Data layer."
+    }
+  ],
+  "Remediation": [
+    {
+      "ViolationSource": "SampleApp.UI.OrderController",
+      "Suggestion": "Move the dependency to an intermediate layer (e.g., Service) or extract an interface.",
+      "Description": "The type \u0027SampleApp.UI.OrderController\u0027 in layer \u0027UI\u0027 should not directly reference \u0027SampleApp.Data.OrderRepository\u0027 in layer \u0027Data\u0027. Consider introducing a service in the \u0027UI\u0027 layer or an abstraction in a shared layer."
+    }
+  ]
+}

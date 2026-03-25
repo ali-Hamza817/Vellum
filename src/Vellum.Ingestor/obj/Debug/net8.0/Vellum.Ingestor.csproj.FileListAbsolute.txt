@@ -1,0 +1,11 @@
+e:\Vellum\src\Vellum.Ingestor\bin\Debug\net8.0\Vellum.Ingestor.deps.json
+e:\Vellum\src\Vellum.Ingestor\bin\Debug\net8.0\Vellum.Ingestor.dll
+e:\Vellum\src\Vellum.Ingestor\bin\Debug\net8.0\Vellum.Ingestor.pdb
+e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\Vellum.Ingestor.GeneratedMSBuildEditorConfig.editorconfig
+e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\Vellum.Ingestor.AssemblyInfoInputs.cache
+e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\Vellum.Ingestor.AssemblyInfo.cs
+e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\Vellum.Ingestor.csproj.CoreCompileInputs.cache
+e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\Vellum.Ingestor.dll
+e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\refint\Vellum.Ingestor.dll
+e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\Vellum.Ingestor.pdb
+e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\ref\Vellum.Ingestor.dll
