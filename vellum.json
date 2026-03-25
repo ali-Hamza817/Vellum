@@ -1,0 +1,19 @@
+{
+  "NamespaceMapping": [
+    { "Pattern": "*.UI*", "Layer": "UI" },
+    { "Pattern": "*.Service*", "Layer": "Service" },
+    { "Pattern": "*.Data*", "Layer": "Data" }
+  ],
+  "Exclusions": [
+    "System.*",
+    "Microsoft.*",
+    "void",
+    "object"
+  ],
+  "Metrics": {
+    "EnableMartinMetrics": true
+  },
+  "Output": {
+    "Format": "SARIF"
+  }
+}

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vellum.Remediation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bf3667d85ed02d54e37dd23072917fcf2a7f4b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vellum.Remediation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vellum.Remediation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

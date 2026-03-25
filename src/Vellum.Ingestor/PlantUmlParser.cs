@@ -10,14 +10,15 @@ public class PlantUmlParser
         var classes = new List<DesignClass>();
         var rules = new List<LayerRule>();
 
-        // This is a naive regex parser for PoC
-        // Example: class OrderController <<UI>>
-        var classRegex = new Regex(@"class\s+(?<name>\w+)(\s+<<(?<layer>\w+)>>)?", RegexOptions.IgnoreCase);
+        // 1. Extract class definitions
+        // Example: class OrderController
+        var classRegex = new Regex(@"class\s+(?<name>\w+)", RegexOptions.IgnoreCase);
         foreach (Match match in classRegex.Matches(content))
         {
-            classes.Add(new DesignClass(match.Groups["name"].Value, match.Groups["layer"].Value));
+            classes.Add(new DesignClass(match.Groups["name"].Value));
         }
 
+        // 2. Extract architectural rules
         // Example: [UI] -> [Service] or [UI] -x-> [Data]
         var ruleRegex = new Regex(@"\[(?<source>\w+)\]\s+(?<arrow>[-x>]+)\s+\[(?<target>\w+)\]", RegexOptions.IgnoreCase);
         foreach (Match match in ruleRegex.Matches(content))

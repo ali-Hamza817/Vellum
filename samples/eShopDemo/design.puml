@@ -1,4 +1,9 @@
 @startuml
+class OrderController
+class OrderService
+class OrderRepository
+class PaymentProcessor
+
 [UI] -> [Service]
 [Service] -> [Data]
 [UI] -x-> [Data]

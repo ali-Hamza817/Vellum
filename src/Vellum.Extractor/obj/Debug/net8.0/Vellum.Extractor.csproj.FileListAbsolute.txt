@@ -30,3 +30,4 @@ e:\Vellum\src\Vellum.Extractor\obj\Debug\net8.0\Vellum.Extractor.dll
 e:\Vellum\src\Vellum.Extractor\obj\Debug\net8.0\refint\Vellum.Extractor.dll
 e:\Vellum\src\Vellum.Extractor\obj\Debug\net8.0\Vellum.Extractor.pdb
 e:\Vellum\src\Vellum.Extractor\obj\Debug\net8.0\ref\Vellum.Extractor.dll
+e:\Vellum\src\Vellum.Extractor\obj\Debug\net8.0\Vellum.Extractor.sourcelink.json

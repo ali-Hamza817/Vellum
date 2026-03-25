@@ -214,3 +214,4 @@ e:\Vellum\tests\Vellum.Tests\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.W
 e:\Vellum\tests\Vellum.Tests\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 e:\Vellum\tests\Vellum.Tests\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 e:\Vellum\tests\Vellum.Tests\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+e:\Vellum\tests\Vellum.Tests\obj\Debug\net8.0\Vellum.Tests.sourcelink.json

@@ -37,3 +37,4 @@ e:\Vellum\src\Vellum.Remediation\obj\Debug\net8.0\Vellum.Remediation.dll
 e:\Vellum\src\Vellum.Remediation\obj\Debug\net8.0\refint\Vellum.Remediation.dll
 e:\Vellum\src\Vellum.Remediation\obj\Debug\net8.0\Vellum.Remediation.pdb
 e:\Vellum\src\Vellum.Remediation\obj\Debug\net8.0\ref\Vellum.Remediation.dll
+e:\Vellum\src\Vellum.Remediation\obj\Debug\net8.0\Vellum.Remediation.sourcelink.json

@@ -145,3 +145,4 @@ e:\Vellum\src\Vellum.Cli\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Works
 e:\Vellum\src\Vellum.Cli\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 e:\Vellum\src\Vellum.Cli\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 e:\Vellum\src\Vellum.Cli\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+e:\Vellum\src\Vellum.Cli\obj\Debug\net8.0\Vellum.Cli.sourcelink.json

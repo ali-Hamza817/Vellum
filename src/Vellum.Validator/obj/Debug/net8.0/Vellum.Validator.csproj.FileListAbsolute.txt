@@ -35,3 +35,4 @@ e:\Vellum\src\Vellum.Validator\obj\Debug\net8.0\Vellum.Validator.dll
 e:\Vellum\src\Vellum.Validator\obj\Debug\net8.0\refint\Vellum.Validator.dll
 e:\Vellum\src\Vellum.Validator\obj\Debug\net8.0\Vellum.Validator.pdb
 e:\Vellum\src\Vellum.Validator\obj\Debug\net8.0\ref\Vellum.Validator.dll
+e:\Vellum\src\Vellum.Validator\obj\Debug\net8.0\Vellum.Validator.sourcelink.json

@@ -9,3 +9,4 @@ e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\Vellum.Ingestor.dll
 e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\refint\Vellum.Ingestor.dll
 e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\Vellum.Ingestor.pdb
 e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\ref\Vellum.Ingestor.dll
+e:\Vellum\src\Vellum.Ingestor\obj\Debug\net8.0\Vellum.Ingestor.sourcelink.json
