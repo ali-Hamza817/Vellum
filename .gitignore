@@ -1,0 +1,17 @@
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.doccache
+*.suo
+.vs/
+.idea/
+.vscode/
+*.json
+!samples/**/*.json
+!appsettings.json
+!vellum.json
+report.json
+graph.json
+*.sarif
+!samples/**/*.sarif
