@@ -1,0 +1,19 @@
+@startuml
+skinparam packageStyle rectangle
+hide empty members
+package "SampleApp.UI" {
+    class Class1
+    class OrderController
+}
+package "SampleApp.Service" {
+    class Class1
+    class OrderService
+}
+package "SampleApp.Data" {
+    class Class1
+    class OrderRepository
+}
+OrderController ..> OrderService
+OrderController ..> OrderRepository
+OrderService ..> OrderRepository
+@enduml

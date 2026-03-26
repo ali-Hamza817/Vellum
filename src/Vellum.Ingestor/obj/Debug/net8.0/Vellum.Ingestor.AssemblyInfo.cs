@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vellum.Ingestor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bf3667d85ed02d54e37dd23072917fcf2a7f4b9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88662ea734cee968acca162ab17d63b700c8f30c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vellum.Ingestor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vellum.Ingestor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

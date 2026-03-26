@@ -509,6 +509,9 @@
         }
       },
       "Vellum.Ingestor/1.0.0": {
+        "dependencies": {
+          "Vellum.Extractor": "1.0.0"
+        },
         "runtime": {
           "Vellum.Ingestor.dll": {
             "assemblyVersion": "1.0.0.0",

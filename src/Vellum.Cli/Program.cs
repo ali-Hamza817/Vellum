@@ -1,6 +1,7 @@
 using System.CommandLine;
 using Vellum.Extractor;
 using Vellum.Ingestor;
+using Vellum.Ingestor.Models;
 using Vellum.Validator;
 using Vellum.Validator.Models;
 using Vellum.Remediation;
@@ -153,7 +154,43 @@ class Program
 
         }, solutionOption, designOption, configOption, outputOption, formatOption);
 
+        var generateCommand = new Command("generate", "Generate a class diagram from source code (Reverse Engineering)");
+        generateCommand.AddOption(solutionOption);
+        var genOutputOption = new Option<string>(
+            name: "--output",
+            description: "The path to save the generated diagram") { IsRequired = true };
+        var genFormatOption = new Option<string>(
+            name: "--format",
+            description: "The diagram format (PlantUML, Mermaid)") { Arity = ArgumentArity.ZeroOrOne };
+        genFormatOption.SetDefaultValue("PlantUML");
+
+        generateCommand.AddOption(genOutputOption);
+        generateCommand.AddOption(genFormatOption);
+
+        generateCommand.SetHandler(async (solutionPath, outputPath, format) =>
+        {
+            Console.WriteLine($"Vellum: Analyzing solution {solutionPath} for reverse-engineering...");
+            var extractor = new RoslynDependencyExtractor();
+            var graph = await extractor.AnalyzeSolutionAsync(solutionPath);
+            Console.WriteLine($"Extracted {graph.Nodes.Count} types and {graph.Edges.Count} dependencies.");
+
+            var generator = new DesignGenerator();
+            string content;
+            if (format?.ToUpper() == "MERMAID")
+            {
+                content = generator.GenerateMermaid(graph);
+            }
+            else
+            {
+                content = generator.GeneratePlantUml(graph);
+            }
+
+            await File.WriteAllTextAsync(outputPath, content);
+            Console.WriteLine($"{format} diagram generated at {outputPath}");
+        }, solutionOption, genOutputOption, genFormatOption);
+
         rootCommand.AddCommand(checkCommand);
+        rootCommand.AddCommand(generateCommand);
 
         return await rootCommand.InvokeAsync(args);
     }

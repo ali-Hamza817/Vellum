@@ -34,7 +34,7 @@ public class VisionUmlParser
         var requestBody = new
         {
             model = "gpt-4o-mini",
-            messages = new[]
+            messages = new object[]
             {
                 new 
                 { 

@@ -1,6 +1,9 @@
 namespace Vellum.Ingestor.Models;
 
-public record DesignModel(List<DesignClass> Classes, List<LayerRule> Rules);
+public record DesignModel(List<DesignClass> Classes, List<LayerRule> Rules)
+{
+    public DesignModel() : this(new List<DesignClass>(), new List<LayerRule>()) { }
+}
 
 public record DesignClass(string Name, string? Layer = null);
 
