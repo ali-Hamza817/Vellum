@@ -1,0 +1,6 @@
+@Vellum.Api_HostAddress = http://localhost:5193
+
+GET {{Vellum.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
